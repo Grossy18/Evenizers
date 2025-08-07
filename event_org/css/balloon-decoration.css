@@ -1,0 +1,250 @@
+/* Import Google Font - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+    padding-top: 150px; /* Offset for fixed header */
+    overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.logo-wrapper {
+    flex-shrink: 0;
+}
+
+.logo-wrapper img {
+    width: 200px;
+    height: auto;
+    max-height: 90px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 80px;
+    padding: 10px 0;
+}
+
+#logo {
+    width: 120px;
+    height: auto;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.search-bar select,
+.search-bar input {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.search-bar button {
+    padding: 8px 12px;
+    background-color: #ff3366;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.main-nav {
+    margin-top: 0;
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav li {
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+.main-nav li:hover {
+    color: #ff3366;
+}
+
+.header-actions {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-actions .icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+/* ===== PAGE CONTENT ===== */
+h1 {
+    padding: 20px 30px 0;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #821d4d;
+}
+
+p {
+    padding: 0 30px 30px;
+    font-size: 1.1rem;
+}
+
+/* ===== ADDITIONAL CONTENT STYLES ===== */
+.top-categories {
+    text-align: center;
+    padding: 40px 20px 20px;
+    background: linear-gradient(to bottom, transparent 0%, #ff9ab8 100%);
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.top-categories h2 {
+    color: #6c4ce0;
+    font-size: 28px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.top-categories p {
+    color: #666;
+    margin: 0;
+    font-size: 16px;
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.category-item {
+    text-align: center;
+}
+
+.category-item img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.category-item p {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.section-block {
+    padding: 3%;
+    background: linear-gradient(to bottom, #f8f8f8 0%, #fff 100%);
+    animation: fadeInUp 1s ease;
+    padding-bottom: 7px;
+}
+
+.section-title {
+    padding: 20px 30px 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #821d4d;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    background: none;
+    text-decoration: none;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    margin: 8px auto 0 auto;
+    height: 4px;
+    width: 80%;
+    background: linear-gradient(90deg, #ffb6e6 0%, #b39ddb 100%);
+    border-radius: 2px;
+    transition: width 0.6s cubic-bezier(.77,0,.18,1);
+    animation: underlineGrow 1s forwards;
+}
+
+@keyframes underlineGrow {
+    from { width: 0; }
+    to { width: 80%; }
+}
+
+.decor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 10px 30px 40px;
+}
+
+.decor-grid img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}

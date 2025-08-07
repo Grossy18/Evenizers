@@ -145,6 +145,21 @@ header {
     color: #ff3366;
 }
 
+
+
+.nav-list a {
+  text-decoration: none;
+  color: #4B0082; /* or whatever purple you’re using */
+  font-weight: bold;
+}
+
+.nav-list a:hover {
+  color: #ff3366; /* optional hover effect */
+  text-decoration: underline; /* or remove this if you want no underline on hover too */
+}
+
+
+
 /* --- Media Queries for Mobile Responsiveness --- */
 
 /* For screens smaller than 768px (common breakpoint for tablets/mobiles) */
