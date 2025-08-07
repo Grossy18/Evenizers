@@ -108,7 +108,7 @@
       <div class="card-container">
         <div class="decoration-card">
             <div class="card-image">
-                <img src="images/Bday-decoration/b1.png.webp" alt="Anniversary Stage Decoration">
+                <img src="https://i.ibb.co/qM3psZMr/b1-png.webp" alt="Anniversary Stage Decoration">
             </div>
             <div class="card-content">
                 <h3 class="card-title">Anniversary Stage Decoration</h3>
@@ -125,25 +125,47 @@
         </div>
     </div>
 
-          <div class="card-container">
-        <div class="decoration-card">
-            <div class="card-image">
-                <img src="images/Bday-decoration/b1.png.webp" alt="Anniversary Stage Decoration">
-            </div>
-            <div class="card-content">
-                <h3 class="card-title">Anniversary Stage Decoration</h3>
-                <div class="card-prices">
-                    <span class="current-price">₹14,999</span>
-                    <span class="original-price">₹18,999</span>
-                </div>
-                <div class="card-rating">
-                    <span class="rating-value">4.5</span>
-                    <i class="fas fa-star star-icon"></i>
-                    <span class="review-count">(39)</span>
-                </div>
-            </div>
-        </div>
+
+    
+
+          
+
+
+
+    <div class="card-container">
+  <div class="decoration-card" th:each="product : ${products}">
+    <div class="card-image">
+      <img th:src="${product.imageUrl}" th:alt="${product.name}" />
     </div>
+    <div class="card-content">
+      <h3 class="card-title" th:text="${product.name}">Anniversary Stage Decoration</h3>
+
+      <div class="card-prices">
+        <span class="current-price" th:text="'₹' + ${product.price}">₹14,999</span>
+        <span class="original-price" th:text="'₹' + ${product.originalPrice}">₹18,999</span>
+      </div>
+
+      <div class="card-rating">
+        <span class="rating-value" th:text="${product.rating}">4.5</span>
+        <i class="fas fa-star star-icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
           <div class="card-container">
         <div class="decoration-card">
